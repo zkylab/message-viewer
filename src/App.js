@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Simulator from './components/Simulator/Simulator'
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="simWrapper">
+        <Tabs className="tabs" defaultActiveKey="profile" id="uncontrolled-tab-example">
+          <Tab eventKey="radnet" title="RADNET">
+          <Simulator className="sim" sim_name={"RADNET"}></Simulator>
+          </Tab>
+          <Tab eventKey="accs" title="ACCS">
+          <Simulator className="sim" sim_name={"ACCS"}></Simulator>
+          </Tab>
+        </Tabs>
+      </div>
     </div>
   );
 }

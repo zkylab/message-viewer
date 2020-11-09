@@ -1,0 +1,16 @@
+.messageContentBase{
+    
+    font-family: 'Goldman', cursive;
+}
+.messageContent{
+    color: blue;
+    display: none;
+}
+.now{
+    color:red;
+    margin-left: 45px;
+    
+}
+.messageTitle{
+
+}
